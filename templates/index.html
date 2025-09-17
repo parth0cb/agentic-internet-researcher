@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Internet Research</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <h2 id="website_title">Agentic Internet Research</h2>
+        
+        <div id="input-form">
+            <div class="input-group">
+                <input type="text" id="query" placeholder="Enter your search query..." autocomplete="off">
+            </div>
+            
+            <div id="type-and-button">
+                <div class="search-type">
+                    Search Type: 
+                    <select id="searchType">
+                        <option value="none">-Select-</option>
+                        <option value="simple">Simple Search</option>
+                        <option value="agentic">Agentic Search</option>
+                    </select>
+                </div>
+
+                <div id="reset_llm_button"><a href="/credentials">Change LLM</a></div>
+                
+                <div><button id="searchBtn">Search</button></div>
+            </div>
+        </div>
+
+        <div class="token-info">
+            <div id="tokenInfo">
+                Input Tokens: 0 | Output Tokens: 0
+            </div>
+            <div id="show-steps-button" onclick="showSteps()">
+                <a href="#">Show Steps</a>
+            </div>
+            <div id="hide-steps-button" onclick="hideSteps()">
+                <a href="#">Hide Steps</a>
+            </div>
+        </div>
+
+        <div id="explanation"></div>
+        
+        <div id="steps-section">
+            <h4>Steps:</h4>
+            <ul id="steps-list"></ul>
+        </div>
+        
+        <div class="results" id="results"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

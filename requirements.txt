@@ -1,0 +1,10 @@
+Flask
+requests
+bleach
+torch
+transformers
+sentence-transformers
+openai
+ddgs
+trafilatura
+markdown
