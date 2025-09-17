@@ -232,7 +232,7 @@ User query: {query}
                         
                         yield {"type": "log", "content": {
                             "explanation": explanation,
-                            "query": full_query
+                            "query": search_query
                         }}
                         
                         # search
